@@ -1,0 +1,24 @@
+/* Default (light mode) */
+:root {
+  --background-color: #fff;
+  --text-color: #111;
+}
+
+/* Dark mode (system preference) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #111;
+    --text-color: #eee;
+  }
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Manual dark mode override (must be last!) */
+:root.dark-mode {
+  --background-color: #111;
+  --text-color: #eee;
+}
