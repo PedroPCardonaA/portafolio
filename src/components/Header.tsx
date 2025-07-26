@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { LuSun, LuMoonStar } from "react-icons/lu";
 
 const Header: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -18,9 +19,8 @@ const Header: React.FC = () => {
 
   return (
     <header>
-      <h1>My Portfolio</h1>
       <button onClick={toggleDarkMode}>
-        Toggle Dark Mode
+        {isDarkMode ? <LuSun /> : <LuMoonStar />}
       </button>
     </header>
   );
