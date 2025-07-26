@@ -3,6 +3,10 @@ import { useState, useEffect } from "react";
 const Header: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
+  const toggleDarkMode = () => {
+    setIsDarkMode((prev) => !prev);
+  };
+
   useEffect(() => {
     console.log("Dark mode preference changed:", isDarkMode);
     if (isDarkMode) {
@@ -15,7 +19,7 @@ const Header: React.FC = () => {
   return (
     <header>
       <h1>My Portfolio</h1>
-      <button onClick={() => setIsDarkMode(!isDarkMode)}>
+      <button onClick={toggleDarkMode}>
         Toggle Dark Mode
       </button>
     </header>
