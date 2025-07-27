@@ -1,16 +1,38 @@
+
+@font-face {
+  font-family: 'NType82';
+  src: url('src/assets/NType82-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Dotrice-Bold';
+  src: url('src/assets/Dotrice-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Dotrice-Regular';
+  src: url('src/assets/Dotrice-Regular.otf') format('opentype');
+}
+
 /* Default (light mode) */
 :root {
   --background-color: #fff;
   --text-color: #111;
+  --font-family: 'NType82', sans-serif;
 }
 
 body {
   background-color: var(--background-color);
   color: var(--text-color);
+  font-family: var(--font-family);
 }
 
 /* Manual dark mode override (must be last!) */
 :root.dark-mode {
   --background-color: #111;
   --text-color: #eee;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Dotrice-Regular', sans-serif;
 }
